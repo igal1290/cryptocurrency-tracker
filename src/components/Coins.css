@@ -8,14 +8,24 @@
 
 /*Code for the crypto image*/
 img {
-    max-width: 5%;
+    max-width: 3%;
     height: auto;
 }
 
+/*just testing*/
+.coin__row {
+    align-items: center;
+    text-align: center;
+}
+
+/*still need to move all the info to the center*/
 .coin__symbol{
     display: flex;
+    color: white;
+    text-indent: 100px;
+    margin-bottom: 15px;
     align-items: center;
-    text-indent: 50px;
+    text-align: center;
 }
 
 
