@@ -8,6 +8,9 @@
 
 .navbar__logo {
   text-align: center;
-  color: white;
+  color: rgb(153, 7, 250);
+  font-weight: 700;
+  font-size: larger;
+  font-family: serif;
 }
 
