@@ -10,3 +10,11 @@
     color: white;
 }
 
+.data {
+    display: flex;
+    color: white;
+    text-indent: 100px;
+    margin-bottom: 15px;
+    align-items: center;
+    text-align: center;
+}

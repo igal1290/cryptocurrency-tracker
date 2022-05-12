@@ -2,6 +2,7 @@
 import './Coins.css';
 
 const CoinItem = (props) => {
+  
   return (
     <div className = "coin__row">
       <div className = "coin__symbol">
