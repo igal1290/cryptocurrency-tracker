@@ -19,9 +19,16 @@ const CoinItem = (props) => {
         <p className="coin__marketcap">
           {`$${props.coin.market_cap.toLocaleString()}`}
         </p>
-        <p className="coin__percent">
-          {props.coin.price_change_percentage_24h}
-        </p>
+
+        {props.coin.price_change_percentage_24h < 0 ? (
+          <p className="coin__percent coin__red">
+            {`${props.coin.price_change_percentage_24h.toFixed(2)}%`}
+          </p>
+        ) : (
+          <p className="coin__percent coin__green">
+            {`${props.coin.price_change_percentage_24h.toFixed(2)}%`}
+          </p>
+        )}
       </div>
     </div>
   );

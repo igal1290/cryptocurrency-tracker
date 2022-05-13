@@ -3,9 +3,21 @@
   margin: auto;
 }
 
+.container__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f1f1f1;
+  margin-top: 4rem;
+  margin-right: 1.6rem;
+  margin-left: 1.6rem;
+  padding: 0 1.4rem;
+  font-weight: 700;
+  border-bottom: solid 1px #34383f;
+}
+
 .coin__row {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   color: #f1f1f1;
@@ -44,12 +56,20 @@
   width: 100%;
 }
 
+.coin__green {
+  color: rgb(36, 193, 36);
+}
+
+.coin__red {
+  color: rgb(215, 58, 30);
+}
+
 .coin__price {
-  width: 160px;
+  width: 280px;
 }
 
 .coin__marketcap {
-  width: 230px;
+  width: 180px;
 }
 
 .coin__percent {
