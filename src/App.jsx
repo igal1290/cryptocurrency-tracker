@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 // pages
 import CoinHomepage from './pages/CoinHomepage';
+import CoinData from './pages/CoinData';
 //axios
 import axios from 'axios';
 // css
@@ -26,7 +27,6 @@ function App() {
       .get(api_url)
       .then((response) => {
         setCoins(response.data);
-        // console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -39,6 +39,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<CoinHomepage coins={coins} />} />
+          <Route path="/coin" element={<CoinData />}>
+            <Route path=":coinId" element={<CoinData />} />
+          </Route>
         </Routes>
       </>
     </Router>
