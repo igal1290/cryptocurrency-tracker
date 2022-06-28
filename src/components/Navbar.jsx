@@ -19,7 +19,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <h1 className="navbar__header">Noden</h1>
+        <h1 className="navbar__header">CryptoCore</h1>
       </nav>
     </div>
   );
