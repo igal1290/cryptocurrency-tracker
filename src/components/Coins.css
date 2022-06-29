@@ -1,12 +1,13 @@
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: auto;
+  width: 100%;
 }
 
 .container__search {
   display: flex;
-  justify-content: end;
-  margin-top: 4rem;
+  justify-content: flex-end;
+  margin-bottom: 6rem;
   position: relative;
 }
 
@@ -17,7 +18,7 @@
   background-color: inherit;
   border: 2px solid #495a8b;
   border-radius: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #f1f1f1;
 }
 
@@ -25,16 +26,21 @@
   color: #b8b8b8;
 }
 
-.container__heading {
+.container__table {
+  width: 100%;
+}
+
+.container__table-head {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: #f1f1f1;
-  margin-top: 5rem;
-  padding: 0 1.4rem;
   font-weight: 700;
   border-bottom: solid 1px rgb(206, 206, 206);
-  width: 100%;
+}
+
+.container__table-row {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
 }
 
 .coin__row {
@@ -42,21 +48,28 @@
   justify-content: space-between;
   align-items: center;
   color: #f1f1f1;
-  padding: 1.4rem;
-  box-shadow: 0px 2px 2px #2c3654;
-  cursor: pointer;
-  transition: 0.1s all ease;
+  padding: 1.6rem;
+  box-shadow: 0px 0px 1px 0.8px #313c5d;
+  transition: 0.1s all ease-in-out;
+  position: relative;
 }
 
 .coin__row:hover {
-  box-shadow: 0px 1px 2px #f1f1f1;
-  transition: 0.1s all ease;
+  background-color: #191e2a;
+  transition: 0.1s all ease-in-out;
+}
+
+.coin__rank {
+  position: absolute;
+  left: 12.7%;
 }
 
 .coin__display {
   display: flex;
   align-items: center;
-  padding-right: 1.8rem;
+  position: absolute;
+  top: 32%;
+  left: 24%;
 }
 
 .coin__image {
@@ -67,13 +80,28 @@
 
 .coin__symbol {
   text-transform: uppercase;
+  color: #f1f1f1;
 }
 
-.coin__data {
-  display: flex;
-  justify-content: space-between;
-  text-align: right;
-  width: 100%;
+.coin__price {
+  position: absolute;
+  left: 39.5%;
+}
+
+.coin__marketcap {
+  position: absolute;
+  right: 35.5%;
+}
+
+.coin__percent {
+  position: absolute;
+  top: 35%;
+  right: 22.2%;
+}
+
+.coin__sparkline {
+  position: absolute;
+  right: 0.4%;
 }
 
 .coin__green {
@@ -84,14 +112,6 @@
   color: rgb(215, 58, 30);
 }
 
-.coin__price {
-  width: 280px;
-}
-
-.coin__marketcap {
-  width: 180px;
-}
-
-.coin__percent {
-  width: 100px;
+.coin__sparkline {
+  width: 12rem;
 }

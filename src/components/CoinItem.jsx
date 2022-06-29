@@ -1,36 +1,54 @@
+import React from 'react';
+// pages
+import CoinData from '../pages/CoinData';
+// react-router-dom
+import { Link } from 'react-router-dom';
+// sparklines
+import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
+// react-icons
+import { AiOutlineStar } from 'react-icons/ai';
 // css
 import './Coins.css';
 
-const CoinItem = (props) => {
+const CoinItem = ({ coin }) => {
   return (
-    <div className="coin__row">
-      <div className="coin__display">
-        <img
-          className="coin__image"
-          src={props.coin.image}
-          alt="coin img"
-        ></img>
-        <p className="coin__symbol">{props.coin.symbol.toUpperCase()}</p>
-      </div>
-      <div className="coin__data">
-        <p className="coin__price">
-          {`$${props.coin.current_price.toLocaleString()}`}
-        </p>
-        <p className="coin__marketcap">
-          {`$${props.coin.market_cap.toLocaleString()}`}
-        </p>
-
-        {props.coin.price_change_percentage_24h < 0 ? (
+    <tr className="coin__row">
+      <td>
+        <AiOutlineStar />
+      </td>
+      <td className="coin__rank">{coin.market_cap_rank}</td>
+      <td>
+        <Link
+          className="coin__display"
+          to={`/coin/${coin.id}`}
+          element={<CoinData />}
+        >
+          <img className="coin__image" src={coin.image} alt="coin img"></img>
+          <p className="coin__symbol">{coin.symbol.toUpperCase()}</p>
+        </Link>
+      </td>
+      <td className="coin__price">
+        ${coin.current_price.toFixed(2).toLocaleString()}
+      </td>
+      <td className="coin__marketcap">${coin.market_cap.toLocaleString()}</td>
+      <td>
+        {coin.price_change_percentage_24h < 0 ? (
           <p className="coin__percent coin__red">
-            {`${props.coin.price_change_percentage_24h.toFixed(2)}%`}
+            {coin.price_change_percentage_24h.toFixed(2)}%
           </p>
         ) : (
           <p className="coin__percent coin__green">
-            {`${props.coin.price_change_percentage_24h.toFixed(2)}%`}
+            {coin.price_change_percentage_24h.toFixed(2)}%
           </p>
         )}
-      </div>
-    </div>
+      </td>
+      <td className="coin__sparkline">
+        <Sparklines data={coin.sparkline_in_7d.price}>
+          <SparklinesLine color="#495a8b" />
+          <SparklinesSpots />
+        </Sparklines>
+      </td>
+    </tr>
   );
 };
 
