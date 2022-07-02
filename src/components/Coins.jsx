@@ -2,6 +2,7 @@
 import { useState } from 'react';
 // components
 import CoinItem from './CoinItem';
+import Trending from './Trending';
 // css
 import './Coins.css';
 
@@ -12,6 +13,7 @@ const Coins = ({ coins }) => {
 
   return (
     <div className="container">
+      <Trending />
       <div className="container__search">
         <form>
           <input

@@ -28,7 +28,11 @@ const CoinItem = ({ coin }) => {
         </Link>
       </td>
       <td className="coin__price">
-        ${coin.current_price.toFixed(2).toLocaleString()}
+        $
+        {coin.current_price.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })}
       </td>
       <td className="coin__marketcap">${coin.market_cap.toLocaleString()}</td>
       <td>

@@ -1,0 +1,40 @@
+.trending__container {
+  margin-bottom: 4rem;
+}
+
+.trending {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1.8rem;
+}
+
+.trending__card {
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px 0px #2b3248;
+  width: 100%;
+  height: 90%;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.trending__symbol {
+  display: flex;
+}
+
+.trending__coin-image {
+  margin-right: 0.8rem;
+  width: 2rem;
+}
+
+.trending__data {
+  display: flex;
+  margin-top: 1.4rem;
+}
+
+.trending__bitcoin {
+  margin-top: 0.2rem;
+  margin-right: 0.4rem;
+  height: 1.2rem;
+  width: 1rem;
+}

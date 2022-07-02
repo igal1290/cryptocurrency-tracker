@@ -35,15 +35,13 @@ function App() {
 
   return (
     <Router>
-      <>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<CoinHomepage coins={coins} />} />
-          <Route path="/coin" element={<CoinData />}>
-            <Route path=":coinId" element={<CoinData />} />
-          </Route>
-        </Routes>
-      </>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<CoinHomepage coins={coins} />} />
+        <Route path="/coin" element={<CoinData />}>
+          <Route path=":coinId" element={<CoinData />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }

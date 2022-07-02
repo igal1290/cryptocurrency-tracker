@@ -1,9 +1,13 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 1.4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+}
+
+.navbar__title {
+  display: flex;
 }
 
 .navbar__logo {
@@ -12,7 +16,43 @@
 
 .navbar__header {
   color: #f1f1f1;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
   font-size: 2rem;
   font-weight: 400;
+}
+
+.navbar__account {
+  display: flex;
+}
+
+.navbar__login {
+  margin-right: 2rem;
+  background-color: inherit;
+  border: 1px solid #495a8b;
+  color: #f1f1f1;
+  border-radius: 8px;
+  width: 4.7rem;
+  height: 2.4rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.navbar__login:hover {
+  background-color: #495a8b;
+  transition: all 0.1s ease;
+}
+
+.navbar__signup {
+  background-color: #495a8b;
+  border: none;
+  color: #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 6rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar__signup:hover {
+  background-color: #39456b;
+  transition: all 0.1s ease-in-out;
 }
