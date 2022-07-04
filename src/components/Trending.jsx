@@ -22,7 +22,7 @@ const Trending = () => {
 
   return (
     <div className="trending__container">
-      <h2>Trending Coins</h2>
+      <h2 className="trending__header">Trending Coins</h2>
       <div className="trending">
         {trending.map((coin, idx) => (
           <div className="trending__card" key={idx}>

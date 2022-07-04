@@ -12,6 +12,7 @@
 
 .navbar__logo {
   margin-right: 0.5rem;
+  margin-top: 0.15rem;
 }
 
 .navbar__header {
@@ -28,9 +29,9 @@
 .navbar__login {
   margin-right: 2rem;
   background-color: inherit;
-  border: 1px solid #495a8b;
+  border: 2px solid #495a8b;
   color: #f1f1f1;
-  border-radius: 8px;
+  border-radius: 5px;
   width: 4.7rem;
   height: 2.4rem;
   cursor: pointer;
@@ -38,7 +39,7 @@
 }
 
 .navbar__login:hover {
-  background-color: #495a8b;
+  border-color: #abbae8;
   transition: all 0.1s ease;
 }
 
@@ -46,7 +47,7 @@
   background-color: #495a8b;
   border: none;
   color: #f1f1f1;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   width: 6rem;
   transition: all 0.1s ease-in-out;
