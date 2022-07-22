@@ -27,13 +27,23 @@ const CoinItem = ({ coin }) => {
           <p className="coin__symbol">{coin.symbol.toUpperCase()}</p>
         </Link>
       </td>
-      <td className="coin__price">
-        $
-        {coin.current_price.toLocaleString(undefined, {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        })}
-      </td>
+      {coin.current_price < 1 ? (
+        <td className="coin__price">
+          $
+          {coin.current_price.toLocaleString(undefined, {
+            minimumFractionDigits: 4,
+            maximumFractionDigits: 4,
+          })}
+        </td>
+      ) : (
+        <td className="coin__price">
+          $
+          {coin.current_price.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}
+        </td>
+      )}
       <td className="coin__marketcap">${coin.market_cap.toLocaleString()}</td>
       <td>
         {coin.price_change_percentage_24h < 0 ? (

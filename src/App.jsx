@@ -14,17 +14,17 @@ import './App.css';
 
 function App() {
   // API URL
-  const api_url =
+  const api =
     'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=true';
 
-  // HOOKS =>
+  // ----- HOOKS -----
   // state
   const [coins, setCoins] = useState([]);
 
   // effect
   useEffect(() => {
     axios
-      .get(api_url)
+      .get(api)
       .then((response) => {
         setCoins(response.data);
       })

@@ -9,8 +9,8 @@ const Navbar = () => {
   return (
     <div className="container">
       <nav className="navbar">
-        <div className="navbar__title">
-          <Link to="/">
+        <Link to="/">
+          <div className="navbar__title">
             <img
               className="navbar__logo"
               src={CryptoIcon}
@@ -18,10 +18,9 @@ const Navbar = () => {
               width="40"
               height="40"
             />
-          </Link>
-
-          <h1 className="navbar__header">CryptoCore</h1>
-        </div>
+            <h1 className="navbar__header">CryptoCore</h1>
+          </div>
+        </Link>
         <div className="navbar__account">
           <button className="navbar__login">Log In</button>
           <button className="navbar__signup">Sign up</button>
