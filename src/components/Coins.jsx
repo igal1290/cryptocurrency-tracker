@@ -11,9 +11,22 @@ const Coins = ({ coins }) => {
   // state
   const [searchInput, setSearchInput] = useState('');
 
+  // ------ Variables ------
+  // filter coins on search
+  const selectedCoins = coins.filter((coin) => {
+    if (searchInput === '') {
+      return coin;
+    } else if (coin.name.toLowerCase().includes(searchInput.toLowerCase())) {
+      return coin;
+    }
+  });
+
   return (
     <div className="container">
-      <Trending />
+      <div className="container__trending-content">
+        <Trending />
+      </div>
+
       <div className="container__search">
         <form>
           <input
@@ -37,19 +50,9 @@ const Coins = ({ coins }) => {
           </tr>
         </thead>
         <tbody>
-          {coins
-            .filter((coin) => {
-              if (searchInput === '') {
-                return coin;
-              } else if (
-                coin.name.toLowerCase().includes(searchInput.toLowerCase())
-              ) {
-                return coin;
-              }
-            })
-            .map((coin) => {
-              return <CoinItem coin={coin} key={coin.id} />;
-            })}
+          {selectedCoins.map((coin) => {
+            return <CoinItem coin={coin} key={coin.id} />;
+          })}
         </tbody>
       </table>
     </div>

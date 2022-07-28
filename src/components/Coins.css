@@ -1,3 +1,19 @@
+.container__trending-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.container__trending-content > img {
+  position: absolute;
+  right: -10rem;
+  top: -4.5rem;
+  width: 680px;
+  height: 580px;
+}
+
 .container__search {
   display: flex;
   justify-content: flex-end;
