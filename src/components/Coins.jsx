@@ -13,6 +13,7 @@ const Coins = ({ coins }) => {
 
   // ------ Variables ------
   // filter coins on search
+  // eslint-disable-next-line
   const selectedCoins = coins.filter((coin) => {
     if (searchInput === '') {
       return coin;
@@ -20,6 +21,12 @@ const Coins = ({ coins }) => {
       return coin;
     }
   });
+
+  // ----- Functions -----
+  // search handler
+  let searchHandler = (event) => {
+    setSearchInput(event.target.value);
+  };
 
   return (
     <div className="container">
@@ -31,7 +38,7 @@ const Coins = ({ coins }) => {
         <form>
           <input
             className="container__search-input"
-            onChange={(e) => setSearchInput(e.target.value)}
+            onChange={searchHandler}
             type="text"
             placeholder="Search a coin"
           />
