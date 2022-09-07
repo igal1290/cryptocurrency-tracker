@@ -1,0 +1,11 @@
+.account__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.account__watchlist {
+  margin-top: 8rem;
+}

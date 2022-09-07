@@ -18,3 +18,11 @@ body {
   margin: auto;
   width: 100%;
 }
+
+.coin__green {
+  color: rgb(36, 193, 37);
+}
+
+.coin__red {
+  color: rgb(215, 58, 30);
+}

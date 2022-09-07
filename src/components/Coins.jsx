@@ -29,7 +29,7 @@ const Coins = ({ coins }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container" data-testid="coins-1">
       <div className="container__trending-content">
         <Trending />
       </div>

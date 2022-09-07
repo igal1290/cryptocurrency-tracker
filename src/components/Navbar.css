@@ -44,16 +44,50 @@
 }
 
 .navbar__signup {
-  background-color: #495a8b;
+  background-color: #52659d;
   border: none;
   color: #f1f1f1;
   border-radius: 5px;
   cursor: pointer;
   width: 6rem;
+  height: 2.4rem;
   transition: all 0.1s ease-in-out;
 }
 
 .navbar__signup:hover {
-  background-color: #39456b;
+  background-color: #414e7a;
   transition: all 0.1s ease-in-out;
+}
+
+.navbar__logout {
+  background-color: #52659d;
+  border: none;
+  color: #f1f1f1;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 6rem;
+  height: 2.4rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar__logout:hover {
+  background-color: #414e7a;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar__profile {
+  margin-right: 2rem;
+  background-color: inherit;
+  border: 2px solid #495a8b;
+  color: #f1f1f1;
+  border-radius: 5px;
+  width: 4.7rem;
+  height: 2.4rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.navbar__profile:hover {
+  border-color: #abbae8;
+  transition: all 0.1s ease;
 }

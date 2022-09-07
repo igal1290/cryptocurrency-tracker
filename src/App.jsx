@@ -1,14 +1,19 @@
 // react
 import { useState, useEffect } from 'react';
 // react-router-dom
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 // components
 import Navbar from './components/Navbar';
 // pages
 import CoinHomepage from './pages/CoinHomepage';
 import CoinData from './pages/CoinData';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import Account from './pages/Account';
 //axios
 import axios from 'axios';
+// context
+import { AuthContextProvider } from './context/AuthContext';
 // css
 import './App.css';
 
@@ -35,15 +40,18 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <AuthContextProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<CoinHomepage coins={coins} />} />
         <Route path="/coin" element={<CoinData />}>
           <Route path=":coinId" element={<CoinData />} />
         </Route>
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Account />} />
       </Routes>
-    </Router>
+    </AuthContextProvider>
   );
 }
 

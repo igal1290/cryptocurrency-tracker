@@ -1,0 +1,85 @@
+.signup {
+  margin: auto;
+  margin-top: 8rem;
+  text-align: center;
+  margin-left: 4rem;
+}
+
+.signup__heading {
+  color: #fff;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.signup__form-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.4rem;
+  margin-right: 6.2rem;
+}
+
+.signup__email-label {
+  margin-right: 4.2rem;
+}
+
+.signup__email-input {
+  width: 280px;
+  padding: 0.2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.signup__email-icon {
+  position: absolute;
+  top: 1.6rem;
+  font-size: 1.2rem;
+  margin-left: 1.4rem;
+}
+
+.signup__password-label {
+  margin-right: 2rem;
+}
+
+.signup__password-input {
+  width: 280px;
+  padding: 0.2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.signup__password-icon {
+  position: absolute;
+  top: 1.6rem;
+  font-size: 1.2rem;
+  margin-left: 1.4rem;
+}
+
+.signup__button {
+  color: #f1f1f1;
+  background-color: #52659d;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  margin-top: 4rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.signup__button:hover {
+  background-color: #414e7a;
+  transition: all 0.1s ease-in-out;
+}
+
+.signup__link {
+  color: #6076ba;
+  padding-left: 0.1rem;
+  border-bottom: solid 1px;
+}

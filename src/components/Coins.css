@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 32%;
+  top: 28%;
   left: 24%;
 }
 
@@ -112,14 +112,6 @@
 .coin__sparkline {
   position: absolute;
   right: 0.4%;
-}
-
-.coin__green {
-  color: rgb(36, 193, 37);
-}
-
-.coin__red {
-  color: rgb(215, 58, 30);
 }
 
 .coin__sparkline {
