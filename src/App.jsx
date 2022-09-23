@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 // components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 // pages
 import CoinHomepage from './pages/CoinHomepage';
 import CoinData from './pages/CoinData';
@@ -26,13 +27,16 @@ function App() {
   // ----- Hooks -----
   // state
   const [coins, setCoins] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   // effect
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get(api)
       .then((response) => {
         setCoins(response.data);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
@@ -43,7 +47,10 @@ function App() {
     <AuthContextProvider>
       <Navbar />
       <Routes>
-        <Route path="/" element={<CoinHomepage coins={coins} />} />
+        <Route
+          path="/"
+          element={<CoinHomepage coins={coins} isLoading={isLoading} />}
+        />
         <Route path="/coin" element={<CoinData />}>
           <Route path=":coinId" element={<CoinData />} />
         </Route>
@@ -51,6 +58,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Account />} />
       </Routes>
+      <Footer />
     </AuthContextProvider>
   );
 }

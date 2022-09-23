@@ -3,10 +3,11 @@ import { useState } from 'react';
 // components
 import CoinItem from './CoinItem';
 import Trending from './Trending';
+import LoadingSpinner from './LoadingSpinner';
 // css
 import './Coins.css';
 
-const Coins = ({ coins }) => {
+const Coins = ({ coins, isLoading }) => {
   // ------ Hooks ------
   // state
   const [searchInput, setSearchInput] = useState('');
@@ -57,9 +58,11 @@ const Coins = ({ coins }) => {
           </tr>
         </thead>
         <tbody>
-          {selectedCoins.map((coin) => {
-            return <CoinItem coin={coin} key={coin.id} />;
-          })}
+          {isLoading && <LoadingSpinner />}
+          {!isLoading &&
+            selectedCoins.map((coin) => {
+              return <CoinItem coin={coin} key={coin.id} />;
+            })}
         </tbody>
       </table>
     </div>
